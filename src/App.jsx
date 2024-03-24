@@ -8,9 +8,10 @@ export const ContextApp = createContext()
 
 const App = () => {
   const [liked, setLiked] = useState([])
+  const [favorites, setFavorites] = useState([])
 
   return (
-    <ContextApp.Provider value={{ liked, setLiked }}>
+    <ContextApp.Provider value={{ liked, setLiked, favorites, setFavorites }}>
       <div>
         <Navbar />
         <Routes>

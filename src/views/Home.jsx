@@ -6,13 +6,10 @@ import Photos from "../assets/js/photos.json"
 const Home = () => {
   const { liked } = useContext(ContextApp)
 
-  // console.log(Photos.photos.url)
-
   return (
     <div className="App">
       <h1>Natural Pic</h1>
       <Gallery photos={Photos.photos} />
-      
     </div>
   )
 }
