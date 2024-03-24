@@ -1,11 +1,17 @@
-import Gallery from "../components/Gallery";
+import { useContext } from "react"
+import { ContextApp } from "../App"
+import Gallery from "../components/Gallery"
+import Photos from "../assets/js/photos.json"
 
 const Home = () => {
+  const { liked } = useContext(ContextApp)
+
   return (
     <div className="App">
       <h1>Natural Pic</h1>
-      <Gallery />
+      <Gallery photos={Photos} />
     </div>
-  );
-};
-export default Home;
+  )
+}
+
+export default Home
