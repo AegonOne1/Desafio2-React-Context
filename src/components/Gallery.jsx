@@ -20,10 +20,12 @@ const Gallery = ({ photos }) => {
         photos.map((photo) => (
           <div key={photo.id} className="gallery-item">
             <img src={photo.src.tiny} alt={photo.title} />
-            <IconHeart
-              filled={liked.includes(photo.id)}
-              onClick={() => handleLikeClick(photo.id)}
-            />
+            <div className="icon-heart-container">
+              <IconHeart
+                filled={liked.includes(photo.id)}
+                onClick={() => handleLikeClick(photo.id)}
+              />
+            </div>
           </div>
         ))
       ) : (

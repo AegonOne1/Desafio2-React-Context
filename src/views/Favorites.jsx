@@ -6,8 +6,8 @@ import Photos from "../assets/js/photos.json"
 const Favorites = () => {
   const { liked } = useContext(ContextApp)
 
-  // Filtra las fotos basadas en las que han sido marcadas como favoritas
-  const favoritePhotos = Photos.filter((photo) => liked.includes(photo.id))
+  // Verificar si Photos
+  const favoritePhotos = Array.isArray(Photos) ? Photos.filter((photo) => liked.includes(photo.id)) : []
 
   return (
     <div>

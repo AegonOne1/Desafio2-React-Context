@@ -64,3 +64,13 @@ a {
 .p-3 {
   padding: 30px;
 }
+
+.gallery-item {
+  position: relative;
+}
+
+.icon-heart-container {
+  position: absolute;
+  top: 10px; /* Ajusta la posición verticalmente según sea necesario */
+  right: 10px; /* Ajusta la posición horizontalmente según sea necesario */
+}

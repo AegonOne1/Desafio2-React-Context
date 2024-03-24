@@ -3,7 +3,6 @@ import { Route, Routes } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import Favorites from "./views/Favorites"
 import Home from "./views/Home"
-import Photos from "./assets/js/photos.json"
 
 export const ContextApp = createContext()
 
