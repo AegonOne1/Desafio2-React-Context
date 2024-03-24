@@ -3,6 +3,7 @@ import { ContextApp } from "../App"
 import IconHeart from "./IconHeart"
 
 const Gallery = ({ photos }) => {
+
   const { liked, setLiked } = useContext(ContextApp)
 
   const handleLikeClick = (id) => {
@@ -18,7 +19,7 @@ const Gallery = ({ photos }) => {
       {Array.isArray(photos) ? (
         photos.map((photo) => (
           <div key={photo.id} className="gallery-item">
-            <img src={photo.url} alt={photo.title} />
+            <img src={photo.src.tiny} alt={photo.title} />
             <IconHeart
               filled={liked.includes(photo.id)}
               onClick={() => handleLikeClick(photo.id)}
